@@ -59,5 +59,63 @@ class CoreDataStore: NSObject {
 // MARK: - Audio Persistence
 
 extension CoreDataStore {
-    //添加、查询、删除
+   
+    func insertAudio(dict: Dictionary<String, Any>) {
+        insert("Audio", dict: dict)
+    }
+    
+    func fetchAllAudios(_ completionBlock: @escaping ([ManagedAudio]) -> Void ) {
+        fetchAll("Audio") { managedObjs in
+            let audios = managedObjs as! [ManagedAudio]
+            completionBlock(audios)
+        }
+    }
+}
+
+// MARK: - Add/Delete/Query
+
+private extension CoreDataStore {
+    func insert(_ entityName: String, dict: Dictionary<String, Any>) {
+        let context = persistentContainer.viewContext
+        
+        let object = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context)
+        
+        let keys = dict.keys
+        for i in keys.indices {
+            let key = keys[i]
+            let val = dict[key]
+            object.setValue(val, forKey: key)
+        }
+        
+        context.insert(object)
+        saveContext()
+    }
+    
+    func fetchAll(_ entityName: String, completionBlock:(([NSManagedObject]) -> Void)!) {
+        let context = persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSManagedObject>()
+        request.entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
+        context.perform { 
+            let objects = try?context.fetch(request)
+            completionBlock(objects!)
+        }
+    }
+    
+    func delete(_ entityName: String, predicateStr: String) {
+        let context = persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSManagedObject>()
+        request.entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
+        let predicate = NSPredicate(format: predicateStr)
+        request.predicate = predicate
+        let objects = try?context.fetch(request)
+        
+        for case let obj in objects! {
+            context.delete(obj)
+        }
+        
+        saveContext()
+    }
+    
 }

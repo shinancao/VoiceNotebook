@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00DF9B81E5F272100FCFE26 /* Audio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00DF9B71E5F272100FCFE26 /* Audio.storyboard */; };
+		C00DF9BA1E5F2B6E00FCFE26 /* RecordBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9B91E5F2B6D00FCFE26 /* RecordBehavior.swift */; };
+		C00DF9BD1E5FC85A00FCFE26 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9BC1E5FC85A00FCFE26 /* StoryboardExtension.swift */; };
+		C00DF9C01E5FDF1D00FCFE26 /* AddModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9BF1E5FDF1D00FCFE26 /* AddModuleInterface.swift */; };
+		C00DF9C41E5FE20C00FCFE26 /* AddInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9C31E5FE20C00FCFE26 /* AddInteractor.swift */; };
+		C00DF9C61E602B3C00FCFE26 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9C51E602B3C00FCFE26 /* ListViewController.swift */; };
+		C00DF9C81E602F5500FCFE26 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9C71E602F5500FCFE26 /* ListCell.swift */; };
+		C00DF9CA1E602F7F00FCFE26 /* ListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9C91E602F7F00FCFE26 /* ListTableViewDataSource.swift */; };
+		C00DF9CC1E602F8D00FCFE26 /* ListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9CB1E602F8D00FCFE26 /* ListTableViewDelegate.swift */; };
+		C00DF9CE1E605C2800FCFE26 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9CD1E605C2800FCFE26 /* ListInteractor.swift */; };
+		C00DF9D11E60650E00FCFE26 /* ListModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D01E60650E00FCFE26 /* ListModuleInterface.swift */; };
+		C00DF9D31E6066D800FCFE26 /* AddViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D21E6066D800FCFE26 /* AddViewInterface.swift */; };
+		C00DF9D51E60677F00FCFE26 /* ListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D41E60677F00FCFE26 /* ListViewInterface.swift */; };
+		C00DF9DA1E61ED5200FCFE26 /* AudioDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D91E61ED5200FCFE26 /* AudioDisplayData.swift */; };
 		C06DFCB81E5C679200FC5571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFCB71E5C679200FC5571 /* AppDelegate.swift */; };
 		C06DFCD01E5C679200FC5571 /* VoiceNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFCCF1E5C679200FC5571 /* VoiceNotebookTests.swift */; };
 		C06DFCEC1E5C7C2500FC5571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06DFCE61E5C7C2500FC5571 /* Assets.xcassets */; };
 		C06DFCF31E5C7C4800FC5571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06DFCEF1E5C7C4800FC5571 /* LaunchScreen.storyboard */; };
-		C06DFCF41E5C7C4800FC5571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C06DFCF11E5C7C4800FC5571 /* Main.storyboard */; };
 		C06DFCF71E5C7CB800FC5571 /* VoiceNotebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C06DFCF51E5C7CB800FC5571 /* VoiceNotebook.xcdatamodeld */; };
 		C06DFD061E5C93FB00FC5571 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFD051E5C93FB00FC5571 /* CoreDataStore.swift */; };
 		C06DFD091E5C96C100FC5571 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFD081E5C96C100FC5571 /* Audio.swift */; };
+		C06DFD0B1E5F231C00FC5571 /* AddDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFD0A1E5F231C00FC5571 /* AddDataManager.swift */; };
+		C06DFD0D1E5F233500FC5571 /* ListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFD0C1E5F233500FC5571 /* ListDataManager.swift */; };
+		C06DFD0F1E5F26B600FC5571 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFD0E1E5F26B600FC5571 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C00DF9B71E5F272100FCFE26 /* Audio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Audio.storyboard; sourceTree = "<group>"; };
+		C00DF9B91E5F2B6D00FCFE26 /* RecordBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordBehavior.swift; sourceTree = "<group>"; };
+		C00DF9BC1E5FC85A00FCFE26 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		C00DF9BF1E5FDF1D00FCFE26 /* AddModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddModuleInterface.swift; sourceTree = "<group>"; };
+		C00DF9C31E5FE20C00FCFE26 /* AddInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInteractor.swift; sourceTree = "<group>"; };
+		C00DF9C51E602B3C00FCFE26 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C00DF9C71E602F5500FCFE26 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		C00DF9C91E602F7F00FCFE26 /* ListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewDataSource.swift; sourceTree = "<group>"; };
+		C00DF9CB1E602F8D00FCFE26 /* ListTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewDelegate.swift; sourceTree = "<group>"; };
+		C00DF9CD1E605C2800FCFE26 /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		C00DF9D01E60650E00FCFE26 /* ListModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModuleInterface.swift; sourceTree = "<group>"; };
+		C00DF9D21E6066D800FCFE26 /* AddViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewInterface.swift; sourceTree = "<group>"; };
+		C00DF9D41E60677F00FCFE26 /* ListViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewInterface.swift; sourceTree = "<group>"; };
+		C00DF9D91E61ED5200FCFE26 /* AudioDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDisplayData.swift; sourceTree = "<group>"; };
 		C06DFCB41E5C679200FC5571 /* VoiceNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06DFCB71E5C679200FC5571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06DFCC61E5C679200FC5571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,10 +66,12 @@
 		C06DFCD11E5C679200FC5571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C06DFCE61E5C7C2500FC5571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C06DFCF01E5C7C4800FC5571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C06DFCF21E5C7C4800FC5571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C06DFCF61E5C7CB800FC5571 /* VoiceNotebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VoiceNotebook.xcdatamodel; sourceTree = "<group>"; };
 		C06DFD051E5C93FB00FC5571 /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		C06DFD081E5C96C100FC5571 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		C06DFD0A1E5F231C00FC5571 /* AddDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDataManager.swift; sourceTree = "<group>"; };
+		C06DFD0C1E5F233500FC5571 /* ListDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataManager.swift; sourceTree = "<group>"; };
+		C06DFD0E1E5F26B600FC5571 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +92,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C00DF9BB1E5FC42500FCFE26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C00DF9BC1E5FC85A00FCFE26 /* StoryboardExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C00DF9BE1E5FDEC400FCFE26 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C00DF9BF1E5FDF1D00FCFE26 /* AddModuleInterface.swift */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		C00DF9CF1E6064BB00FCFE26 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C00DF9D01E60650E00FCFE26 /* ListModuleInterface.swift */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		C00DF9D81E61ED2E00FCFE26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C00DF9D91E61ED5200FCFE26 /* AudioDisplayData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C06DFCAB1E5C679200FC5571 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +175,7 @@
 		C06DFCDD1E5C7AF600FC5571 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9BB1E5FC42500FCFE26 /* Extensions */,
 				C06DFD071E5C96B300FC5571 /* Model */,
 				C06DFCDE1E5C7AF600FC5571 /* Store */,
 			);
@@ -140,7 +205,7 @@
 			children = (
 				C06DFCE61E5C7C2500FC5571 /* Assets.xcassets */,
 				C06DFCEF1E5C7C4800FC5571 /* LaunchScreen.storyboard */,
-				C06DFCF11E5C7C4800FC5571 /* Main.storyboard */,
+				C00DF9B71E5F272100FCFE26 /* Audio.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -163,6 +228,8 @@
 		C06DFCF81E5C7E2400FC5571 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9D81E61ED2E00FCFE26 /* Model */,
+				C00DF9CF1E6064BB00FCFE26 /* Module Interface */,
 				C06DFD001E5C890600FC5571 /* Interactor */,
 				C06DFD011E5C890600FC5571 /* Manager */,
 				C06DFD021E5C890600FC5571 /* UI */,
@@ -173,6 +240,7 @@
 		C06DFCF91E5C7E2400FC5571 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9BE1E5FDEC400FCFE26 /* Module Interface */,
 				C06DFCFF1E5C88F000FC5571 /* Interactor */,
 				C06DFCFE1E5C88F000FC5571 /* Manager */,
 				C06DFCFD1E5C88F000FC5571 /* UI */,
@@ -183,6 +251,9 @@
 		C06DFCFD1E5C88F000FC5571 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9B91E5F2B6D00FCFE26 /* RecordBehavior.swift */,
+				C06DFD0E1E5F26B600FC5571 /* AddViewController.swift */,
+				C00DF9D21E6066D800FCFE26 /* AddViewInterface.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -190,6 +261,7 @@
 		C06DFCFE1E5C88F000FC5571 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C06DFD0A1E5F231C00FC5571 /* AddDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -197,6 +269,7 @@
 		C06DFCFF1E5C88F000FC5571 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9C31E5FE20C00FCFE26 /* AddInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -204,6 +277,7 @@
 		C06DFD001E5C890600FC5571 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9CD1E605C2800FCFE26 /* ListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -211,6 +285,7 @@
 		C06DFD011E5C890600FC5571 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C06DFD0C1E5F233500FC5571 /* ListDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -218,6 +293,11 @@
 		C06DFD021E5C890600FC5571 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C00DF9C71E602F5500FCFE26 /* ListCell.swift */,
+				C00DF9D41E60677F00FCFE26 /* ListViewInterface.swift */,
+				C00DF9C51E602B3C00FCFE26 /* ListViewController.swift */,
+				C00DF9C91E602F7F00FCFE26 /* ListTableViewDataSource.swift */,
+				C00DF9CB1E602F8D00FCFE26 /* ListTableViewDelegate.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -314,8 +394,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06DFCF31E5C7C4800FC5571 /* LaunchScreen.storyboard in Resources */,
+				C00DF9B81E5F272100FCFE26 /* Audio.storyboard in Resources */,
 				C06DFCEC1E5C7C2500FC5571 /* Assets.xcassets in Resources */,
-				C06DFCF41E5C7C4800FC5571 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,9 +413,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00DF9CC1E602F8D00FCFE26 /* ListTableViewDelegate.swift in Sources */,
 				C06DFD091E5C96C100FC5571 /* Audio.swift in Sources */,
+				C00DF9D31E6066D800FCFE26 /* AddViewInterface.swift in Sources */,
+				C06DFD0D1E5F233500FC5571 /* ListDataManager.swift in Sources */,
+				C00DF9D51E60677F00FCFE26 /* ListViewInterface.swift in Sources */,
+				C00DF9D11E60650E00FCFE26 /* ListModuleInterface.swift in Sources */,
+				C00DF9C41E5FE20C00FCFE26 /* AddInteractor.swift in Sources */,
+				C00DF9C81E602F5500FCFE26 /* ListCell.swift in Sources */,
+				C06DFD0F1E5F26B600FC5571 /* AddViewController.swift in Sources */,
 				C06DFD061E5C93FB00FC5571 /* CoreDataStore.swift in Sources */,
+				C00DF9BD1E5FC85A00FCFE26 /* StoryboardExtension.swift in Sources */,
 				C06DFCB81E5C679200FC5571 /* AppDelegate.swift in Sources */,
+				C06DFD0B1E5F231C00FC5571 /* AddDataManager.swift in Sources */,
+				C00DF9C01E5FDF1D00FCFE26 /* AddModuleInterface.swift in Sources */,
+				C00DF9BA1E5F2B6E00FCFE26 /* RecordBehavior.swift in Sources */,
+				C00DF9DA1E61ED5200FCFE26 /* AudioDisplayData.swift in Sources */,
+				C00DF9CA1E602F7F00FCFE26 /* ListTableViewDataSource.swift in Sources */,
+				C00DF9C61E602B3C00FCFE26 /* ListViewController.swift in Sources */,
+				C00DF9CE1E605C2800FCFE26 /* ListInteractor.swift in Sources */,
 				C06DFCF71E5C7CB800FC5571 /* VoiceNotebook.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,14 +461,6 @@
 				C06DFCF01E5C7C4800FC5571 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		C06DFCF11E5C7C4800FC5571 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C06DFCF21E5C7C4800FC5571 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -540,6 +628,7 @@
 				C06DFCD61E5C679200FC5571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C06DFCD71E5C679200FC5571 /* Build configuration list for PBXNativeTarget "VoiceNotebookTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +637,7 @@
 				C06DFCD91E5C679200FC5571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
