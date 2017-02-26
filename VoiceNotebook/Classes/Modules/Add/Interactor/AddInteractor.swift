@@ -19,10 +19,10 @@ class AddInteractor: NSObject, AddModuleInterface {
     
     
     func saveAddActionWith(audioName: String, recordDate: Date, audioData: Data) {
-        let audioPath = audioDirPath! + "/"+audioName
+        let audioPath = audioDirPath! + audioName
         do {
             try audioData.write(to: URL(fileURLWithPath: audioPath))
-            let audio = Audio(name: audioName, recordDate: recordDate, filePath: audioPath)
+            let audio = Audio(name: audioName, recordDate: recordDate)
             dataManager.addNewAudio(audio)
             print("audioPath:"+audioPath)
             userInterface?.addModuleDidSaveAddAction()
@@ -33,19 +33,14 @@ class AddInteractor: NSObject, AddModuleInterface {
     
     private static func createAudioDir() -> String? {
         let fileManager = FileManager.default
-        var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
+
+        let dirPath = FileManager.audioDir
         
-        let dirPath = documentsDirectory + "/audio"
-        if !fileManager.fileExists(atPath: dirPath) {
-            do {
-                try fileManager.createDirectory(atPath: dirPath, withIntermediateDirectories: true, attributes: nil)
-                return dirPath
-            } catch {
-                return nil
-            }
-        } else {
+        if fileManager.createDir(dirPath) {
             return dirPath
+        } else {
+            return nil
         }
+        
     }
 }

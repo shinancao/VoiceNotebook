@@ -66,11 +66,15 @@ class RecordBehavior: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        FileManager.default.clearDir(FileManager.tempDir)
+    }
+    
     private func audioFileURL() -> URL? {
         let currentDateTime = Date()
         let audioName = formatter.string(from: currentDateTime) + audioFormat
         
-        let tmpDirectory = URL(string:NSTemporaryDirectory())
+        let tmpDirectory = URL(string:FileManager.tempDir)
         let soundURL = tmpDirectory?.appendingPathComponent(audioName)
         return soundURL
     }

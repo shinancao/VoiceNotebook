@@ -10,4 +10,5 @@ import Foundation
 
 protocol ListViewInterface {
     func showAudioDisplayData(data: [AudioDisplayData])
+    func audioPlayerDidFinishPlaying()
 }

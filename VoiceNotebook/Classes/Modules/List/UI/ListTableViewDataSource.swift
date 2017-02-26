@@ -12,7 +12,7 @@ extension ListViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let data = dataProperty {
+        if let data = dataArr {
             return data.count
         } else {
             return 0
@@ -20,7 +20,10 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListCell
+        let audio = dataArr![indexPath.row]
+        cell.delegate = self
+        cell.setup(audio)
         return cell
     }
     

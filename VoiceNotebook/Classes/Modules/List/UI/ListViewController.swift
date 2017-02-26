@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController {
     
     var eventHandler: ListModuleInterface!
-    var dataProperty: [AudioDisplayData]?
+    var dataArr: [AudioDisplayData]?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,7 +36,37 @@ class ListViewController: UIViewController {
 
 extension ListViewController: ListViewInterface {
     func showAudioDisplayData(data: [AudioDisplayData]) {
-        dataProperty = data
+        dataArr = data
         tableView.reloadData()
+    }
+    
+    func audioPlayerDidFinishPlaying() {
+        if let index = dataArr!.index(where: { $0.isPlaying == true}) {
+            var audio = dataArr![index]
+            audio.isPlaying = false
+            dataArr![index] = audio
+            
+            tableView.reloadData()
+        }
+    }
+}
+
+extension ListViewController: ListCellDelegateInterface {
+    func didTapPlayAudio(_ audio: AudioDisplayData) {
+        if let index = dataArr!.index(where: { $0.isPlaying == true}) {
+            var temp = dataArr![index]
+            temp.isPlaying = false
+            dataArr![index] = temp
+        }
+        
+        if let index = dataArr!.index(where: { $0 == audio}) {
+            var temp = dataArr![index]
+            temp.isPlaying = true
+            dataArr![index] = temp
+        }
+        
+        tableView.reloadData()
+        eventHandler.playAudio(at: audio.filePath)
+
     }
 }

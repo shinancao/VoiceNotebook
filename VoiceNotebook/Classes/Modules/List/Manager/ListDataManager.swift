@@ -15,7 +15,7 @@ class ListDataManager: NSObject {
         dataStore.fetchAllAudios { managedAudios in
             
             let audioArr = managedAudios.map {
-                Audio(name: $0.name!, recordDate: $0.recordDate! as Date, filePath: $0.filePath!)
+                Audio(name: $0.name!, recordDate: $0.recordDate! as Date)
             }
             
             completionBlock(audioArr)

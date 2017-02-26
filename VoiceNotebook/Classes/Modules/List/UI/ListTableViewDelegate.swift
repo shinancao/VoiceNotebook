@@ -9,5 +9,13 @@
 import UIKit
 
 extension ListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var audio = dataArr![indexPath.row]
+        audio.isPlaying = false
+        dataArr![indexPath.row] = audio
+        tableView.reloadData()
+        eventHandler.stopPlaying()
+    }
 }

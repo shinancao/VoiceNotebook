@@ -8,8 +8,18 @@
 
 import Foundation
 
-struct AudioDisplayData {
-    let name: String
+struct AudioDisplayData: Equatable {
     let filePath: String
-    let isPlaying: Bool
+    let name: String
+    var isPlaying: Bool = false
+    
+    init(name: String) {
+        self.name = name
+        filePath = FileManager.audioDir + name
+    }
 }
+
+func == (lhs: AudioDisplayData, rhs: AudioDisplayData) -> Bool {
+    return lhs.name == rhs.name
+}
+

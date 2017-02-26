@@ -115,15 +115,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wP-ff-u4b">
-                                                    <rect key="frame" x="20" y="6" width="46" height="30"/>
+                                                    <rect key="frame" x="20" y="6" width="80" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="6eD-vn-eig"/>
+                                                        <constraint firstAttribute="width" constant="80" id="6eD-vn-eig"/>
                                                         <constraint firstAttribute="height" constant="30" id="dXg-2V-SaS"/>
                                                     </constraints>
                                                     <state key="normal" title="播放"/>
+                                                    <state key="disabled" title="正在播放"/>
+                                                    <connections>
+                                                        <action selector="playAudio:" destination="Q8c-Ds-4Zq" eventType="touchUpInside" id="TZW-kI-cIp"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8u-tS-tzO">
-                                                    <rect key="frame" x="86" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="120" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

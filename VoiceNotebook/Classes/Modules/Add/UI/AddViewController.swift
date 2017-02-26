@@ -10,7 +10,7 @@ import UIKit
 
 class AddViewController: UIViewController, AddViewInterface {
 
-    var eventHandler: AddModuleInterface?
+    var eventHandler: AddModuleInterface!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class AddViewController: UIViewController, AddViewInterface {
 
     @IBAction func saveAudioAction(_ sender: RecordBehavior) {
    
-        eventHandler?.saveAddActionWith(audioName: sender.audioInfo.0, recordDate: sender.audioInfo.1, audioData: sender.audioInfo.2)
+        eventHandler.saveAddActionWith(audioName: sender.audioInfo.0, recordDate: sender.audioInfo.1, audioData: sender.audioInfo.2)
     }
     
     // MARK: - AddModuleDelegateInterface

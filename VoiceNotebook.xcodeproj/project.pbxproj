@@ -21,6 +21,7 @@
 		C00DF9D31E6066D800FCFE26 /* AddViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D21E6066D800FCFE26 /* AddViewInterface.swift */; };
 		C00DF9D51E60677F00FCFE26 /* ListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D41E60677F00FCFE26 /* ListViewInterface.swift */; };
 		C00DF9DA1E61ED5200FCFE26 /* AudioDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9D91E61ED5200FCFE26 /* AudioDisplayData.swift */; };
+		C00DF9DC1E620E7200FCFE26 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DF9DB1E620E7200FCFE26 /* FileManagerExtension.swift */; };
 		C06DFCB81E5C679200FC5571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFCB71E5C679200FC5571 /* AppDelegate.swift */; };
 		C06DFCD01E5C679200FC5571 /* VoiceNotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DFCCF1E5C679200FC5571 /* VoiceNotebookTests.swift */; };
 		C06DFCEC1E5C7C2500FC5571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06DFCE61E5C7C2500FC5571 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		C00DF9D21E6066D800FCFE26 /* AddViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewInterface.swift; sourceTree = "<group>"; };
 		C00DF9D41E60677F00FCFE26 /* ListViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewInterface.swift; sourceTree = "<group>"; };
 		C00DF9D91E61ED5200FCFE26 /* AudioDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDisplayData.swift; sourceTree = "<group>"; };
+		C00DF9DB1E620E7200FCFE26 /* FileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		C06DFCB41E5C679200FC5571 /* VoiceNotebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceNotebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06DFCB71E5C679200FC5571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06DFCC61E5C679200FC5571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C00DF9BC1E5FC85A00FCFE26 /* StoryboardExtension.swift */,
+				C00DF9DB1E620E7200FCFE26 /* FileManagerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				C00DF9C01E5FDF1D00FCFE26 /* AddModuleInterface.swift in Sources */,
 				C00DF9BA1E5F2B6E00FCFE26 /* RecordBehavior.swift in Sources */,
 				C00DF9DA1E61ED5200FCFE26 /* AudioDisplayData.swift in Sources */,
+				C00DF9DC1E620E7200FCFE26 /* FileManagerExtension.swift in Sources */,
 				C00DF9CA1E602F7F00FCFE26 /* ListTableViewDataSource.swift in Sources */,
 				C00DF9C61E602B3C00FCFE26 /* ListViewController.swift in Sources */,
 				C00DF9CE1E605C2800FCFE26 /* ListInteractor.swift in Sources */,

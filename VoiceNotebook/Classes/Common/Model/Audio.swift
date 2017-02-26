@@ -11,11 +11,9 @@ import Foundation
 struct Audio {
     let name: String
     let recordDate: Date
-    let filePath: String
     
     func toDictionary() -> Dictionary<String, Any> {
         return ["name": name,
-                "recordDate": recordDate,
-                "filePath": filePath]
+                "recordDate": recordDate]
     }
 }

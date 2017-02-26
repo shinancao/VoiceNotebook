@@ -10,4 +10,6 @@ import Foundation
 
 protocol ListModuleInterface {
     func updateView()
+    func playAudio(at filePath: String)
+    func stopPlaying()
 }
