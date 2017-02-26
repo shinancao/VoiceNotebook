@@ -11,7 +11,7 @@ import AVFoundation
 
 let audioFormat = ".caf"
 
-class RecordBehavior: UIControl {
+class RecordBehavior: UIControl, AVAudioPlayerDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
@@ -29,6 +29,12 @@ class RecordBehavior: UIControl {
         didSet {
             playButton.isEnabled = enablePlay
             doneButton.isEnabled = enablePlay
+        }
+    }
+    
+    var enableRecord: Bool = true {
+        didSet {
+            recordButton.isEnabled = enableRecord
         }
     }
     
@@ -121,11 +127,17 @@ class RecordBehavior: UIControl {
             player.stop()
             
             playButton.setTitle("播放", for: .normal)
+            enableRecord = true
+            
         } else {
             playButton.setTitle("暂停", for: .normal)
             do {
                 try player = AVAudioPlayer(contentsOf: recorder.url)
+                player.delegate = self
                 player.play()
+                
+                enableRecord = false
+                
             } catch {
                 
             }
@@ -135,6 +147,12 @@ class RecordBehavior: UIControl {
     @IBAction func saveAudio(_ sender: Any) {
         
         sendActions(for: .touchUpInside)
+    }
+    
+    // MARK - AVAudioPlayerDelegate
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        enableRecord = true
     }
     
 }

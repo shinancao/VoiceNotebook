@@ -65,7 +65,8 @@ extension CoreDataStore {
     }
     
     func fetchAllAudios(_ completionBlock: @escaping ([ManagedAudio]) -> Void ) {
-        fetchAll("Audio") { managedObjs in
+        let sortDescriptor = NSSortDescriptor(key: "recordDate", ascending: false)
+        fetchAll("Audio", sortDescriptors: [sortDescriptor]) { managedObjs in
             let audios = managedObjs as! [ManagedAudio]
             completionBlock(audios)
         }
@@ -91,11 +92,12 @@ private extension CoreDataStore {
         saveContext()
     }
     
-    func fetchAll(_ entityName: String, completionBlock:(([NSManagedObject]) -> Void)!) {
+    func fetchAll(_ entityName: String, sortDescriptors: [NSSortDescriptor]?, completionBlock:(([NSManagedObject]) -> Void)!) {
         let context = persistentContainer.viewContext
         
         let request = NSFetchRequest<NSManagedObject>()
         request.entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
+        request.sortDescriptors = sortDescriptors
         context.perform { 
             let objects = try?context.fetch(request)
             completionBlock(objects!)
