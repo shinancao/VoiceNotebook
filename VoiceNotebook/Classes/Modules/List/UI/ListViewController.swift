@@ -31,6 +31,13 @@ class ListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Help Method
+    func setAudio(at index: Int, isPlaying: Bool) {
+        var audio = dataArr![index]
+        audio.isPlaying = isPlaying
+        dataArr![index] = audio
+    }
 
 }
 
@@ -42,9 +49,8 @@ extension ListViewController: ListViewInterface {
     
     func audioPlayerDidFinishPlaying() {
         if let index = dataArr!.index(where: { $0.isPlaying == true}) {
-            var audio = dataArr![index]
-            audio.isPlaying = false
-            dataArr![index] = audio
+            
+            setAudio(at: index, isPlaying: false)
             
             tableView.reloadData()
         }
@@ -54,15 +60,11 @@ extension ListViewController: ListViewInterface {
 extension ListViewController: ListCellDelegateInterface {
     func didTapPlayAudio(_ audio: AudioDisplayData) {
         if let index = dataArr!.index(where: { $0.isPlaying == true}) {
-            var temp = dataArr![index]
-            temp.isPlaying = false
-            dataArr![index] = temp
+            setAudio(at: index, isPlaying: false)
         }
         
         if let index = dataArr!.index(where: { $0 == audio}) {
-            var temp = dataArr![index]
-            temp.isPlaying = true
-            dataArr![index] = temp
+            setAudio(at: index, isPlaying: true)
         }
         
         tableView.reloadData()

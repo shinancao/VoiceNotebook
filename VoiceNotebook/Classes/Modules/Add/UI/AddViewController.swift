@@ -34,9 +34,14 @@ class AddViewController: UIViewController, AddViewInterface {
     }
     
     // MARK: - AddModuleDelegateInterface
-    func addModuleDidSaveAddAction() {
-        //弹窗提示已保存完成
-        print("addModuleDidSaveAddAction")
+    func addModuleDidSaveAddAction(_ audioName: String) {
+        let alertController = UIAlertController(title: nil, message: "已保存为:\(audioName)", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "好滴~", style: .cancel) { (action) in
+          
+        }
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
     }
     
 }

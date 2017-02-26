@@ -12,9 +12,8 @@ extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        var audio = dataArr![indexPath.row]
-        audio.isPlaying = false
-        dataArr![indexPath.row] = audio
+        setAudio(at: indexPath.row, isPlaying: false)
+        
         tableView.reloadData()
         eventHandler.stopPlaying()
     }

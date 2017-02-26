@@ -11,11 +11,12 @@ import Foundation
 struct AudioDisplayData: Equatable {
     let filePath: String
     let name: String
-    var isPlaying: Bool = false
+    var isPlaying: Bool
     
     init(name: String) {
         self.name = name
         filePath = FileManager.audioDir + name
+        isPlaying = false
     }
 }
 

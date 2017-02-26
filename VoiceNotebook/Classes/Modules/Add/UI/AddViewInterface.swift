@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AddViewInterface {
-    func addModuleDidSaveAddAction()
+    func addModuleDidSaveAddAction(_ audioName: String)
 }

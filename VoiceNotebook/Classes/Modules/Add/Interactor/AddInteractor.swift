@@ -24,8 +24,7 @@ class AddInteractor: NSObject, AddModuleInterface {
             try audioData.write(to: URL(fileURLWithPath: audioPath))
             let audio = Audio(name: audioName, recordDate: recordDate)
             dataManager.addNewAudio(audio)
-            print("audioPath:"+audioPath)
-            userInterface?.addModuleDidSaveAddAction()
+            userInterface?.addModuleDidSaveAddAction(audioName)
         } catch {
             print(error)
         }
